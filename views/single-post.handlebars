@@ -4,5 +4,37 @@
             <h2>{{post.title}}</h2>
             <h3>Posted by {{post.User.username}}</h3>
         </div>
+        <div class="post-body">
+            {{post.body}}
+        </div>
     </section>
+
+    {{#if post.Comments}}
+        <section class="comment-card">
+            <div class="comment-card-body">
+                {{#each post.Comments}}
+                    <div>
+                        <p>
+                            {{body}}
+                        </p>
+                        <p>
+                            {{User.username}}, {{format_date created_at}}
+                        </p>
+                    </div>
+                {{/each}}
+            </div>
+        </section>
+    {{/if}}
+
+    <form id="new-comment-form" class="card">
+        <h3>Add a New Comment</h3>
+        <div>
+            <input type="hidden" name="post-id" value="{{post.id}}" />
+            <label class="form-label" for="comment-body">Comment</label>
+            <textarea name="comment-body" class="form-imput"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </div>
+    </form>
 </div>
+
+<script src="/js/comment.js"></script>
