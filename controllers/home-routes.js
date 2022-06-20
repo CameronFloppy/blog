@@ -16,10 +16,7 @@ router.get('/', (req,res) => {
 });
 
 router.get('/post/:id', (req,res) => {
-    Post.findOne(req.params.id,{
-        where: {
-            id: req.params.id
-        },
+    Post.findByPk(req.params.id,{
         include: [
             User,
             {
@@ -32,7 +29,7 @@ router.get('/post/:id', (req,res) => {
         if(dbPostData){
             const post = dbPostData.get({ plain:true })
 
-            res.render('single-posts', {post});
+            res.render('single-post', {post});
         } else {
             res.status(404).end()
         }

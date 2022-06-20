@@ -5,7 +5,7 @@ async function newComment(event) {
     const body = document.querySelector('textarea[name="comment-body"]').value;
 
     if(body) {
-        await fetch('/api/comment' , {
+        await fetch('/api/comment/' , {
             method: 'POST',
             body: JSON.stringify({
                 postId,
@@ -20,4 +20,4 @@ async function newComment(event) {
     }
 } 
 
-document.querySelector('#new-comment').addEventListener('submit', newComment);
+document.querySelector('#new-comment-form').addEventListener('submit', newComment);
