@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog</title>
+    <title class="site-title">Tech Blog</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/dist/css/bootstrap.css">
 </head>
 
 <body>
-    <nav class="">
+    <nav class="nav-bar">
         <ul class="d-flex flex-row justify-content-around">
-            <li class="justify-content-around nav-item"><a href="/">Home</a></li>
-            <li class="justify-content-around nav-item"><a href="/dashboard">Dashboard</a></li>
-            <li class="justify-content-around nav-item"><a href="/login">Login</a></li>
-            <li class="justify-content-around nav-item"><a href="#" id="logout">Logout</a></li>
+            <li class="justify-content-around nav-item"><a class="nav" href="/">Home</a></li>
+            <li class="justify-content-around nav-item"><a class="nav" href="/dashboard">Dashboard</a></li>
+            <li class="justify-content-around nav-item"><a class="nav" href="/login">Login</a></li>
+            <li class="justify-content-around nav-item"><a class="nav" href="#" id="logout">Logout</a></li>
         </ul>
     </nav>
     <header class="hero d-flex">
@@ -26,10 +26,16 @@
         {{{body}}}
     </main>
 
-    <script src="/dist/js/bootstrap.js"></script>
-    <script src="/js/logout.js"></script>
+
+    <section class="d-flex justify-content-center">
+    <a href="/dashboard/new">➕ New Post</a>
+    </section>
+
+    
 </body>
 
+<script src="/dist/js/bootstrap.js"></script>
+<script src="/js/logout.js"></script>
 
 
 </html>
