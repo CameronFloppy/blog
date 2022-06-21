@@ -1,7 +1,8 @@
 :root {
-    --primary: azure;
-    --secondary: aqua;
-    --tertiary: orange;
+    --light: #ECB365;
+    --mid: #41729F;
+    --dark: #041C32;
+    --lightmid: #04293A;
 
 }
 
@@ -11,11 +12,11 @@
     text-decoration: none;
     list-style: none;
     font-size: 20px;
-    color: black;
+    color: var(--dark);
 }
 
 body {
-    background-color: var(--primary);
+    background-color: lightgray;
 }
 
 a:link { text-decoration: none; }
@@ -24,22 +25,30 @@ a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 
 
-/* a:hover { } */
+a:hover { 
+    color: #b88b4d;
+}
 
 
-a:active { text-decoration: none; }
+a:active { color: var(--tertiary); }
 
 
 .hero-title {
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 25%;
+    margin-left: 20%;
     margin-right: auto;
+    color: var(--light);
 }
 
+.nav-list {
+    margin: 0px;
+    padding-bottom: 0px;
+}
 
 .nav-bar {
-    background-color: var(--primary);
-    margin-bottom: 0px;
+    background-color: var(--lightmid);
+    margin: 0px;
+    padding-bottom: 0px;
 }
 
 .nav {
@@ -48,6 +57,95 @@ a:active { text-decoration: none; }
 }
 
 .hero {
-    background-color: var(--tertiary);
+    background-color: var(--dark);
     margin-top: 0px;
+}
+
+.light-text {
+    color: var(--light);
+}
+
+.lightmid-text {
+    color: var(--lightmid);
+}
+
+.mid-text {
+    color: var(--mid);
+}
+
+.dark-text {
+    color: var(--dark);
+}
+
+.hero {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card-title {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.card-body {
+    margin: 0;
+    padding: 20px;
+}
+
+.post-title {
+    background-color: var(--lightmid);
+    margin: 0px;
+    padding-left: 10px;
+}
+
+.post-body {
+    background-color: var(--mid);
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+.post {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.dash-post {
+    padding: 10px;
+    background-color: var(--mid);
+    color: var(--light);
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    font-size: 25px;
+}
+
+.post-subtitle {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.form-card {
+    background-color: lightgray;
+    border: none;
+}
+
+.btn {
+    background-color: #41729F;
+    margin-top: 2px;
+}
+
+.comment {
+    background-color: var(--mid);
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.comment-user {
+    margin: none;
+    padding: none;
 }

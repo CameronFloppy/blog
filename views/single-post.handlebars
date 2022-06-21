@@ -1,10 +1,10 @@
 <div class="post">
     <section class="card">
-        <div class="post-header">
-            <h2>{{post.title}}</h2>
-            <h3>Posted by {{post.User.username}}</h3>
+        <div class="post-header post-title">
+            <h2 class="post-title light-text">{{post.title}}</h2>
+            <h3 class="light-text post-subtitle">Posted by {{post.User.username}}</h3>
         </div>
-        <div class="post-body">
+        <div class="post-body light-text">
             {{post.body}}
         </div>
     </section>
@@ -14,10 +14,10 @@
             <div class="comment-card-body">
                 {{#each post.Comments}}
                     <div>
-                        <p>
+                        <p class="comment light-text">
                             {{body}}
                         </p>
-                        <p>
+                        <p class="comment-user light-text">
                             {{User.username}}
                         </p>
                     </div>
@@ -26,13 +26,24 @@
         </section>
     {{/if}}
 
-    <form id="new-comment-form" class="card">
-        <h3>Add a New Comment</h3>
-        <div>
+    <form id="new-comment-form" class="card form-card">
+        <div class="d-flex justify-content-center light-text">
+            <h3>Add a New Comment</h3>
+        </div>
+        <div class="">
             <input type="hidden" name="post-id" value="{{post.id}}" />
-            <label class="form-label" for="comment-body">Comment</label>
-            <textarea name="comment-body" class="form-imput"></textarea>
-            <button type="submit" class="btn">Submit</button>
+            <div class="">
+                <div class="d-flex justify-content-center">
+                <label class="form-label light-text" for="comment-body">Comment</label>
+                </div>
+                <div class="d-flex justify-content-center">
+                <textarea name="comment-body" class="form-imput"></textarea>
+                </div>
+
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn">Submit</button>
+            </div>
         </div>
     </form>
 </div>
